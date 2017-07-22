@@ -1,5 +1,5 @@
 import PricingRule from '../models/PricingRule';
-import { QUANITY_DISCOUNT } from '../models/RuleTypes';
+import { QUANTITY_DISCOUNT } from '../models/RuleTypes';
 
 describe('PricingRule', () => {
     it('sets up properties correctly', () => {
@@ -11,12 +11,12 @@ describe('PricingRule', () => {
             productId,
             discountFor,
             discountGet,
-            type: QUANITY_DISCOUNT
+            type: QUANTITY_DISCOUNT
         });
 
         expect(Rule.productId).toBe(productId);
         expect(Rule.discountFor).toBe(discountFor);
         expect(Rule.discountGet).toBe(discountGet);
-        expect(Rule.type).toBe(QUANITY_DISCOUNT);
+        expect(Rule.type).toBe(QUANTITY_DISCOUNT);
     });
 });

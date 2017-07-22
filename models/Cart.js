@@ -1,6 +1,6 @@
 import { Map, List } from 'immutable';
 import {
-    QUANITY_DISCOUNT,
+    QUANTITY_DISCOUNT,
     BULK_ORDER_DISCOUNT,
     ADDON_FREEBIES
 } from './RuleTypes';
@@ -141,7 +141,7 @@ export default class Cart {
                     Map({
                         id,
                         name: this.products.getIn([id, 'name']),
-                        quanity: prices.size,
+                        quantity: prices.size,
                         amount: this.applyPricingRules(rule, prices)
                     })
                 );
@@ -151,7 +151,7 @@ export default class Cart {
                     Map({
                         id,
                         name: this.products.getIn([id, 'name']),
-                        quanity: prices.size,
+                        quantity: prices.size,
                         amount: this.getTotalPrices(prices)
                     })
                 );
@@ -207,7 +207,7 @@ export default class Cart {
      */
     applyPricingRules(rule, prices) {
         switch (rule.type) {
-        case QUANITY_DISCOUNT:
+        case QUANTITY_DISCOUNT:
             return this.applyQuanityDiscount(rule, prices);
         case BULK_ORDER_DISCOUNT:
             return this.applyBulkOrderDiscount(rule, prices);
@@ -240,7 +240,7 @@ export default class Cart {
     }
 
     /**
-     * Apply bulk discount rule. Only apply if the quanity is
+     * Apply bulk discount rule. Only apply if the quantity is
      * greater than discountFor given by the rule.
      * 
      * @param {*} rule 

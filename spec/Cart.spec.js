@@ -7,7 +7,7 @@ import Promos from '../models/Promos';
 import Cart from '../models/Cart';
 
 import {
-    QUANITY_DISCOUNT,
+    QUANTITY_DISCOUNT,
     BULK_ORDER_DISCOUNT,
     ADDON_FREEBIES
 } from '../models/RuleTypes';
@@ -39,7 +39,7 @@ describe('Cart', () => {
             new PricingRule({
                 productId: 'ult_small',
                 discountFor: 3,
-                type: QUANITY_DISCOUNT
+                type: QUANTITY_DISCOUNT
             })
         );
 
@@ -75,7 +75,7 @@ describe('Cart', () => {
             new PricingRule({
                 productId: 'ult_small',
                 discountFor: 3,
-                type: QUANITY_DISCOUNT
+                type: QUANTITY_DISCOUNT
             })
         );
 
@@ -115,7 +115,7 @@ describe('Cart', () => {
             new PricingRule({
                 productId: 'ult_small',
                 discountFor: 3,
-                type: QUANITY_DISCOUNT
+                type: QUANTITY_DISCOUNT
             })
         );
 
@@ -171,7 +171,7 @@ describe('Cart', () => {
             new PricingRule({
                 productId: 'ult_small',
                 discountFor: 3,
-                type: QUANITY_DISCOUNT
+                type: QUANTITY_DISCOUNT
             })
         );
 

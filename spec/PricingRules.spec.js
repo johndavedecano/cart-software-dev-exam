@@ -1,7 +1,7 @@
 import { Map } from 'immutable';
 import PricingRule from '../models/PricingRule';
 import PricingRules from '../models/PricingRules';
-import { QUANITY_DISCOUNT } from '../models/RuleTypes';
+import { QUANTITY_DISCOUNT } from '../models/RuleTypes';
 
 const ERROR_MESSAGE = 'Invalid pricing rule given';
 
@@ -13,7 +13,7 @@ describe('PricingRules', () => {
         const Rule = new PricingRule({
             productId,
             discountFor,
-            type: QUANITY_DISCOUNT
+            type: QUANTITY_DISCOUNT
         });
 
         const Rules = new PricingRules();
